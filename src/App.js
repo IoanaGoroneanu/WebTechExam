@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
+import AddCrewView from './Components/AddCrewView';
+import AddShipView from './Components/AddShipView';
+import Homepage from './Components/Homepage';
+import ViewCrew from './Components/ViewCrew';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      <Switch>
+      <Route path='/' exact>
+        <Homepage />
+      </Route>
+      <Route path='/addship' exact>
+        <AddShipView />
+      </Route>
+      <Route path='/addcrew' exact>
+        <AddCrewView />
+      </Route>
+      <Route path='/crew' exact>
+        <ViewCrew />
+      </Route>
+      </Switch>
+    </Router>
+    </>
   );
 }
 
