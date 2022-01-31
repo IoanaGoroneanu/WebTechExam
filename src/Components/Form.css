@@ -53,6 +53,7 @@ form {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    z-index: -1;
 }
 
 form:after{
@@ -132,7 +133,7 @@ input{
     padding: 10px 15px;
     border-radius: 8px;
     background-color: #F8F8F8;
-    color:white;
+    color:black;
 }
 
 button{
@@ -146,7 +147,5 @@ button{
 
 div .search-container{
     margin-top: 25px;
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;    
 }
-
